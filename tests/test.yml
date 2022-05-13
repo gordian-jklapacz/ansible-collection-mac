@@ -32,6 +32,6 @@
 
   roles:
     - elliotweiser.osx-command-line-tools
-    - gordian-jklapacz.mac.homebrew
-    - gordian-jklapacz.mac.mas
-    - gordian-jklapacz.mac.dock
+    - gordian_jklapacz.mac.homebrew
+    - gordian_jklapacz.mac.mas
+    - gordian_jklapacz.mac.dock

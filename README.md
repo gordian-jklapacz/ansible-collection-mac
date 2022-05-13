@@ -8,16 +8,16 @@ This collection includes helpful Ansible roles and content to help with macOS au
 
 Roles included in this collection (click on the link to see the role's README and documentation):
 
-  - `gordian-jklapacz.mac.homebrew` ([documentation](https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/roles/homebrew/README.md))
-  - `gordian-jklapacz.mac.mas` ([documentation](https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/roles/mas/README.md))
-  - `gordian-jklapacz.mac.dock` ([documentation](https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/roles/dock/README.md))
+  - `gordian_jklapacz.mac.homebrew` ([documentation](https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/roles/homebrew/README.md))
+  - `gordian_jklapacz.mac.mas` ([documentation](https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/roles/mas/README.md))
+  - `gordian_jklapacz.mac.dock` ([documentation](https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/roles/dock/README.md))
 
 ## Installation
 
 Install via Ansible Galaxy:
 
 ```
-ansible-galaxy collection install gordian-jklapacz.mac
+ansible-galaxy collection install gordian_jklapacz.mac
 ```
 
 Or include this collection in your playbook's `requirements.yml` file:
@@ -25,7 +25,7 @@ Or include this collection in your playbook's `requirements.yml` file:
 ```
 ---
 collections:
-  - name: gordian-jklapacz.mac
+  - name: gordian_jklapacz.mac
 ```
 
 For a real-world example, see my [Mac Dev Playbook's requirements file](https://github.com/gordian-jklapacz/mac-dev-playbook/blob/master/requirements.yml).
@@ -40,7 +40,7 @@ roles:
   - name: elliotweiser.osx-command-line-tools
 
 collections:
-  - name: gordian-jklapacz.mac
+  - name: gordian_jklapacz.mac
 ```
 
 ## Usage
@@ -71,8 +71,8 @@ Here's an example playbook which installs some Mac Apps (assuming you are signed
       - vlc
 
   roles:
-    - gordian-jklapacz.mac.homebrew
-    - gordian-jklapacz.mac.mas
+    - gordian_jklapacz.mac.homebrew
+    - gordian_jklapacz.mac.mas
 ```
 
 For a real-world usage example, see my [Mac Dev Playbook](https://github.com/gordian-jklapacz/mac-dev-playbook).
@@ -89,7 +89,7 @@ This collection was created by [Jeff Geerling](https://www.jeffgeerling.com), au
 
 [badge-gh-actions]: https://github.com/gordian-jklapacz/ansible-collection-mac/workflows/CI/badge.svg?event=push
 [link-gh-actions]: https://github.com/gordian-jklapacz/ansible-collection-mac/actions?query=workflow%3ACI
-[badge-collection]: https://img.shields.io/badge/collection-gordian-jklapacz.mac-blue
+[badge-collection]: https://img.shields.io/badge/collection-gordian_jklapacz.mac-blue
 [link-galaxy]: https://galaxy.ansible.com/gordian-jklapacz/mac
 [badge-license]: https://img.shields.io/github/license/gordian-jklapacz/ansible-collection-mac.svg
 [link-license]: https://github.com/gordian-jklapacz/ansible-collection-mac/blob/master/LICENSE

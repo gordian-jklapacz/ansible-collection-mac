@@ -104,7 +104,7 @@ Any additional folders inside `homebrew_prefix` for which to ensure homebrew use
         homebrew_installed_packages:
           - mysql
       roles:
-        - gordian-jklapacz.homebrew
+        - gordian_jklapacz.homebrew
 
 See the `tests/local-testing` directory for an example of running this role over
 Ansible's `local` connection. See also:

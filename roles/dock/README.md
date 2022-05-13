@@ -4,7 +4,7 @@ This role automates the use of `dockutil` to manage the items in your macOS Dock
 
 ## Requirements
 
-  - **Homebrew**: Requires `homebrew` already installed (you can use `gordian-jklapacz.mac.homebrew` to install it on your Mac).
+  - **Homebrew**: Requires `homebrew` already installed (you can use `gordian_jklapacz.mac.homebrew` to install it on your Mac).
 
 ## Role Variables
 
@@ -24,7 +24,7 @@ Dock items to add. `pos` parameter is optional and will place the Dock item in a
 
 ## Dependencies
 
-  - (Soft dependency) `gordian-jklapacz.homebrew`
+  - (Soft dependency) `gordian_jklapacz.homebrew`
 
 ## Example Playbook
 
@@ -49,8 +49,8 @@ Dock items to add. `pos` parameter is optional and will place the Dock item in a
             pos: 3
 
       roles:
-        - gordian-jklapacz.mac.homebrew
-        - gordian-jklapacz.mac.dock
+        - gordian_jklapacz.mac.homebrew
+        - gordian_jklapacz.mac.dock
 ```
 
 See the [Mac Development Ansible Playbook](https://github.com/gordian-jklapacz/mac-dev-playbook) for an example of this role's usage.

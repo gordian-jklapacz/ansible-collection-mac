@@ -1,5 +1,5 @@
 ---
-namespace: gordian-jklapacz
+namespace: gordian_jklapacz
 name: mac
 version: "2.0.0"
 readme: README.md
