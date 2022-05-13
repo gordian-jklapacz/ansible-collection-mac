@@ -1,7 +1,7 @@
 ---
 namespace: gordian-jklapacz
 name: mac
-version: "1.3.1"
+version: "2.0.0"
 readme: README.md
 
 authors:
