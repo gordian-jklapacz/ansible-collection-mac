@@ -10,7 +10,7 @@ name: CI
 
 defaults:
   run:
-    working-directory: ansible_collections/gordian-jklapacz/mac
+    working-directory: ansible_collections/gordian_jklapacz/mac
 
 jobs:
 
@@ -21,7 +21,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: ansible_collections/gordian-jklapacz/mac
+          path: ansible_collections/gordian_jklapacz/mac
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
