@@ -1,11 +1,11 @@
 ---
-namespace: geerlingguy
+namespace: gordian-jklapacz
 name: mac
 version: "1.2.0"
 readme: README.md
 
 authors:
-  - geerlingguy
+  - gordian-jklapacz
 
 description: Collection of macOS automation tools for Ansible.
 
@@ -39,9 +39,9 @@ tags:
 dependencies:
   community.general: ">=3.0.0"
 
-repository: https://github.com/geerlingguy/ansible-collection-mac
-documentation: https://github.com/geerlingguy/ansible-collection-mac
+repository: https://github.com/gordian-jklapacz/ansible-collection-mac
+documentation: https://github.com/gordian-jklapacz/ansible-collection-mac
 homepage: https://www.jeffgeerling.com
-issues: https://github.com/geerlingguy/ansible-collection-mac/issues
+issues: https://github.com/gordian-jklapacz/ansible-collection-mac/issues
 
 build_ignore: []

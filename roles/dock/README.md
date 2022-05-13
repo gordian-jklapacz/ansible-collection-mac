@@ -4,7 +4,7 @@ This role automates the use of `dockutil` to manage the items in your macOS Dock
 
 ## Requirements
 
-  - **Homebrew**: Requires `homebrew` already installed (you can use `geerlingguy.mac.homebrew` to install it on your Mac).
+  - **Homebrew**: Requires `homebrew` already installed (you can use `gordian-jklapacz.mac.homebrew` to install it on your Mac).
 
 ## Role Variables
 
@@ -24,7 +24,7 @@ Dock items to add. `pos` parameter is optional and will place the Dock item in a
 
 ## Dependencies
 
-  - (Soft dependency) `geerlingguy.homebrew`
+  - (Soft dependency) `gordian-jklapacz.homebrew`
 
 ## Example Playbook
 
@@ -49,11 +49,11 @@ Dock items to add. `pos` parameter is optional and will place the Dock item in a
             pos: 3
 
       roles:
-        - geerlingguy.mac.homebrew
-        - geerlingguy.mac.dock
+        - gordian-jklapacz.mac.homebrew
+        - gordian-jklapacz.mac.dock
 ```
 
-See the [Mac Development Ansible Playbook](https://github.com/geerlingguy/mac-dev-playbook) for an example of this role's usage.
+See the [Mac Development Ansible Playbook](https://github.com/gordian-jklapacz/mac-dev-playbook) for an example of this role's usage.
 
 ## License
 
@@ -63,4 +63,4 @@ MIT / BSD
 
 This role was created in 2021 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
 
-The contents of this role were originally created by [@dspolleke](https://github.com/dspolleke) as part of the [`mac-dev-playbook`](https://github.com/geerlingguy/mac-dev-playbook).
+The contents of this role were originally created by [@dspolleke](https://github.com/dspolleke) as part of the [`mac-dev-playbook`](https://github.com/gordian-jklapacz/mac-dev-playbook).

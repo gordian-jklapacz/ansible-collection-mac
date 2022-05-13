@@ -32,6 +32,6 @@
 
   roles:
     - elliotweiser.osx-command-line-tools
-    - geerlingguy.mac.homebrew
-    - geerlingguy.mac.mas
-    - geerlingguy.mac.dock
+    - gordian-jklapacz.mac.homebrew
+    - gordian-jklapacz.mac.mas
+    - gordian-jklapacz.mac.dock

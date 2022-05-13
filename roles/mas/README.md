@@ -4,7 +4,7 @@ Installs [mas](https://github.com/mas-cli/mas) on macOS, and installs macOS apps
 
 ## Requirements
 
-  - **Homebrew**: Requires `homebrew` already installed (you can use `geerlingguy.mac.homebrew` to install it on your Mac).
+  - **Homebrew**: Requires `homebrew` already installed (you can use `gordian-jklapacz.mac.homebrew` to install it on your Mac).
   - **Mac App Store account**: You can either sign into the Mac App Store via the GUI before running this role, or you can set the `mas_email` and `mas_password` prior to running the role. For security reasons, if you're going to use this role to sign in, you should use `vars_prompt` for at least the password; don't store unencrypted passwords with your playbooks!
 
 ## Role Variables
@@ -51,7 +51,7 @@ A list of apps to uninstall from the computer, which were installed using the Ma
 
 ## Dependencies
 
-  - (Soft dependency) `geerlingguy.homebrew`
+  - (Soft dependency) `gordian-jklapacz.homebrew`
 
 ## Example Playbook
 
@@ -60,10 +60,10 @@ A list of apps to uninstall from the computer, which were installed using the Ma
         mas_installed_apps:
           - { id: 497799835, name: "Xcode (8.1)" }
       roles:
-        - geerlingguy.homebrew
-        - geerlingguy.mas
+        - gordian-jklapacz.homebrew
+        - gordian-jklapacz.mas
 
-See the [Mac Development Ansible Playbook](https://github.com/geerlingguy/mac-dev-playbook) for an example of this role's usage.
+See the [Mac Development Ansible Playbook](https://github.com/gordian-jklapacz/mac-dev-playbook) for an example of this role's usage.
 
 ## License
 
