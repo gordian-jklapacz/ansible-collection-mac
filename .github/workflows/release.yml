@@ -31,6 +31,8 @@ jobs:
 
       - name: Install Ansible.
         run: pip3 install ansible-core
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
 
       - name: Release to Ansible Galaxy.
         run: ansible-playbook -i 'localhost,' galaxy-deploy.yml -e "github_tag=${{ github.ref }}"
