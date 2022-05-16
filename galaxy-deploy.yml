@@ -15,7 +15,7 @@
   gather_facts: false
 
   vars:
-    namespace: gordian-jklapacz
+    namespace: gordian_jklapacz
     collection: mac
     # Requires github_tag to be set when calling playbook.
     release_tag: "{{ github_tag.split('/')[-1] }}"
