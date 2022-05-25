@@ -14,3 +14,27 @@ homebrew_folders_base:
   - share/zsh
   - share/zsh/site-functions
   - var
+
+homebrew_essentials:
+  - autoconf
+  - automake
+  - coreutils
+  - git
+  - inetutils
+  - libevent
+  - libffi
+  - libmemcached
+  - libpng
+  - libtool
+  - libyaml
+  - openblas
+  - openssl
+  - ossp-uuid
+  - pkg-config
+  - readline
+  - tree
+  - watch
+  - wget
+  - xz
+  - zlib
+  - { name: libpq, install_options: build-from-source }
