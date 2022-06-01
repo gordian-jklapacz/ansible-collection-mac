@@ -1,0 +1,64 @@
+---
+- name: Ensure VSCode is installed.
+  homebrew_cask: name=visual-studio-code state=present accept_external_apps=true
+
+- name: Get VSCode Facts
+  block:
+    - name: Set config directory
+      set_fact:
+        vscode_config_directory: "{{ ansible_env.HOME }}/Library/Application Support/Code/User"
+    - name: Set config status
+      stat:
+        path: "{{ vscode_config_directory }}"
+      register: vscode_config_dir_st
+    - name: Set config path
+      set_fact:
+        vscode_config: "{{ vscode_config_directory }}/settings.json"
+    - name: Set config status
+      stat:
+        path: "{{ vscode_config }}"
+      register: vscode_config_st
+
+- name: Ensure VSCode config is created
+  block:
+    - name: Create config dir
+      ansible.builtin.file:
+        path: "{{ vscode_config }}"
+        owner: "{{ lookup('env', 'USER') }}"
+        state: directory
+      when: not vscode_config_dir_st.stat.exists
+
+    - name: Create a default VSCode configuration
+      template:
+        src: templates/vscode-settings.json.j2
+        dest: "{{ vscode_config }}/settings.json"
+        owner: "{{ lookup('env', 'USER') }}"
+        force: yes
+      when: not vscode_config_st.stat.exists
+
+- name: Ensure VSCode Extensions are installed
+  block:
+    - name: Set vscode executable
+      command: which code
+      register: vscode_exe
+
+    - name: List extensions
+      command: "{{ vscode_exe.stdout }} --list-extensions"
+      register: vscode_installed_extensions
+
+    - block:
+        - name: Install VSCode extensions
+          shell: "{{ vscode_exe.stdout }} --install-extension {{ item }}"
+          when: not item in vscode_installed_extensions.stdout_lines
+          loop: "{{ vscode_extensions }}"
+        - name: Install vim extension
+          shell: "{{ vscode_exe.stdout }} --install-extension {{ vscode_vim_extension }}"
+          when: vscode_vim and not vscode_vim_extension in vscode_installed_extensions.stdout_lines
+      rescue:
+        - name: Recover VSCode Extension Installation
+          debug:
+            msg: "{{ (ansible_failed_result.results|selectattr('failed', 'defined')|first).stderr_lines }}"
+  rescue:
+    - name: Recover VSCode Resolution
+      debug:
+        msg: Extension installation failed, likely because `code` is not resolvable
